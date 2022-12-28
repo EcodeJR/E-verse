@@ -1,0 +1,76 @@
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #282c34;
+  overflow-x: hidden;
+}
+
+.App-header {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 0 20px;
+}
+
+.App-link {
+  color: #fff;
+  text-decoration: dotted;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  box-shadow: 0 0 30px rgb(74 222 128);
+  z-index: 1;
+  border: 5px solid rgb(74 222 128);
+  animation: 2s shade infinite;
+}
+@keyframes shade {
+  0%{
+    box-shadow: 0 0 20px rgb(74 222 128);
+  }
+  50%{
+    box-shadow: 0 0 30px rgb(74 222 128);
+  }
+  100%{
+    box-shadow: 0 0 20px rgb(74 222 128);
+  }
+}
+.hero{
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.open{
+  right: -40vw;
+  transition: all .3s ease-in-out;
+}
+.close{
+  right: 0;
+  transition: all .3s ease-in-out;
+}
+.hero h1{
+  /*font-size: 120px;*/
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  z-index: 10;
+}
